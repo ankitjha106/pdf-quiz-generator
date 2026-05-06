@@ -32,7 +32,6 @@ fileInput.addEventListener("change", function(event){
         pdfjsLib.getDocument(typedArray).promise.then(function(pdf){
             pdfDoc = pdf;
             alert("PDF uploaded Successfully.");
-            // style
             pageRender(1); //call pageRender()
         });
     };
