@@ -16,8 +16,6 @@ document.getElementById("start-quiz").addEventListener("click",function(){
         alert("PDF not uploaded");
         return;
     }
-    // alert("Starting quiz");
-
     generateQuiz();
 });
 
@@ -36,7 +34,6 @@ fileInput.addEventListener("change", function(event){
             alert("PDF uploaded Successfully.");
             // style
             pageRender(1); //call pageRender()
-            
         });
     };
     reader.readAsArrayBuffer(file);
@@ -47,7 +44,6 @@ fileInput.addEventListener("change", function(event){
 function extractText(){
     if(!pdfDoc){
         alert("Please upload a pdf file first.");
-        //style
         return;
     }
     extractedText = "";
@@ -69,7 +65,6 @@ function extractText(){
     Promise.all(promises).then(() => {
         console.log("TEXT:",extractedText);
         document.getElementById("output").innerText = extractedText;
-
         document.getElementById("start-quiz").style.display="block";
     });
 }
@@ -87,8 +82,7 @@ function pageRender(num) {
             canvasContext: ctx,
             viewport: viewport
         });
-    });
-    
+    }); 
 }
       /* QUIZ PART USING NLP */
 
@@ -142,7 +136,6 @@ function generateQuiz(){
         <p><b>Q${count+1}: </b> ${question}</p>
        
         `;
-
         options.forEach(opt =>{
             quizHTML += `
             <button onclick = "checkAnswer('${opt}', '${answer}', this)">
@@ -156,7 +149,6 @@ function generateQuiz(){
     }
 
     document.getElementById("quiz-container").innerHTML = quizHTML;
-
         console.log(extractedText);
 }
 // For Options
@@ -169,8 +161,7 @@ function generateOptions(correctAnswer){
         let randomWord = allWords[Math.floor(Math.random() * allWords.length)];
 
         randomWord = randomWord.replace(/[^a-zA-Z]/g, ""); //for clean word
-
-
+        
         if(randomWord && !options.includes(randomWord)){
             options.push(randomWord);
         }
