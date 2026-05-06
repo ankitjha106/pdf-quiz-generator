@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input type="file" id="file-input" accept="application/pdf" hidden>
+    
+    <div class="navbar">
+        <h2>PDF to Quiz Generator</h2>
+        <div>
+            <button class="active"="window.location.href='index.html'">Home</button>
+            <!-- <button class="active">Home</button> -->
+            <button onclick="window.location.href='about.html'">About Us</button>
+        </div>
+    </div>
+    
+    
+    
+    <div class="container">  
+    <h2 id="quiz-title">PDF TO QUIZ GENERATOR</h2>
+
+        <canvas id="pdf-render"></canvas>
+
+
+
+
+
+    <div class="top-bar"> 
+
+         <button onclick="document.getElementById('file-input').click()">
+    Upload PDF
+  </button>
+ 
+      <button id="start-quiz" style="display:none;">Start Quiz</button>
+
+    </div>
+    
+    <button class="extract-btn" onclick="extractText()">Extract Text</button>
+    
+    
+    <div class="bottom-bar">
+         <div id="output"></div>
+        
+
+   
+
+    <div id="quiz-container"></div>
+
+  </div>
+   
+        
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="main.js"></script>
+
+    </div>
+</body>
+</html>

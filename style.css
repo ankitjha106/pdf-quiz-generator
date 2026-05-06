@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 800px;
+    margin: 40px auto;   
+    padding: 20px;
+    text-align: center;
+    background:#e3f2fd;  
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(3, 99, 243, 0.936); 
+}
+
+/* PDF canvas */
+canvas {
+    margin-top: 20px;
+    max-width: 100%;
+    border-radius: 8px;
+    background: #f8f8f9;   
+   
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: gray;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* Different buttons */
+.top-bar button:nth-child(1) {
+    background: #68bff9;
+    color: rgb(16, 3, 3);
+}
+
+.top-bar button:nth-child(2) {
+    background: #5bf6f1;
+    color: rgb(14, 1, 1);
+}
+
+.top-bar button:nth-child(3) {
+    background: #51faf7;
+
+    color: white;
+}
+
+.extract-btn {
+    background: #45d9f0;
+    color: rgb(8, 0, 0);
+}
+
+/* Quiz Card */
+.question {
+    
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: left;
+    background:#c7e4ed;
+color: #090101;
+   
+}
+hr {
+    display: none;
+}
+
+/* Option buttons */
+.question button {
+
+    width: 100%;
+    margin-top: 8px;
+    background: #d6eaf0;
+    text-align: left;
+}
+.question button:hover {
+    background: #4a90a4;
+}
+
+/* Extracted text */
+#output {
+    margin-top: 20px;
+    text-align: left;
+    background: #fdfbfb;
+    padding: 10px;
+    border-radius: 6px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+/* about us  */
+/* NAVBAR */
+.navbar {
+    background:#11ae9ee1;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar button {
+    background: transparent;
+    border: 1px solid white;
+    color: rgb(16, 1, 1);
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.navbar button.active {
+    background: rgb(238, 238, 238);
+    color: #011001;
+}
+
+/* MAIN ABOUT SECTION */
+.about-header {
+    text-align: center;
+    margin-top: 30px;
+
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 25px;
+    border-radius: 25px;
+    box-shadow: 0 4px 10px rgba(5, 177, 246, 0.929);
+   
+}
+/* CARD */
+.about-card {
+    background:#e3f2fd;;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+.faculty {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.faculty img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    margin-right: 15px;
+    border: 2px solid #e74c3c;
+}
+.team-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    align-items: stretch;
+}
+.team-member {
+    width: 48%;
+    padding: 15px;
+    border-radius: 10px;
+}
